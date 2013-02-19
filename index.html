@@ -1,0 +1,451 @@
+<!doctype html>
+<!--[if lt IE 7]> <html lang="en-us" class="no-js ie6"> <![endif]-->
+<!--[if IE 7]>    <html lang="en-us" class="no-js ie7"> <![endif]-->
+<!--[if IE 8]>    <html lang="en-us" class="no-js ie8"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en-us" class="no-js"> <!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" type="text/css" href="Calc.css">
+<link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
+<title>Data Calculator</title>
+</head>
+
+<body>
+<div id="HeaderContainer"> </div>
+<div id="BodyContainer">
+
+<div id="main">
+<div id="Title"> 
+    <h3> <h3>Data Calculator - Internet Usage</h3>
+</div>
+<div id="ProductFeatureBox"> 
+<div id="Content">
+    <div style="width: 553px;">
+<h3>Estimate your Monthly Usage.</h3>
+<p> Our mobile data calculator can help you find an approximate amount of mobile data that you will require*.</p>
+<p>  <strong> Step 1: </strong> Select the Time Period</p>
+</div>
+
+
+<div class="mainContainer">
+
+		<div class="htmltabs">
+<!--the tabs-->
+
+<ul class="tabs">
+				<li class="tab1">
+					<a class="tab1 tab">
+						Daily	
+					</a>
+				</li>
+                <li class="tab2">
+                    <a class="tab2 tab">
+                        Weekly   
+                    </a>
+                </li>
+				<li class="tab3">
+					<a class="tab3 tab">
+						Monthly 
+					</a>
+				</li>
+				</ul> 
+                <p>  <strong> Step 2: </strong> Adjust the Sliders Below to calculate your average Data Usage.</p>
+			<div class="tab1 tabsContent">
+				<div><!-- daily content starts here-->
+					<form id="price-calculator-pro" action="#">
+
+<div class="option">
+<p><h4>Email Access</h4>
+	
+	<fieldset>		
+<img src="images/email_img.png">        
+<div id="sliderdailyemail" class="slider_width "></div>
+<p class="slider_Value">
+    
+    <input type="text" id="dailyemail" placeholder="0" style="border: 0; color: #f6931f; font-weight: bold;" />
+    <label for="dailyemail">Emails</label>
+    
+</p>
+</fieldset>
+</p>
+
+</div>
+<div class="option">
+<h4>Browsing</h4>
+<fieldset>
+<img src="images/web_img.png">     
+<div id="sliderdailybrowsing" class="slider_width "></div>
+<p class="slider_Value">
+    
+    <input type="text" id="dailybrowsing" placeholder="0" style="border: 0; color: #f6931f; font-weight: bold;"  />
+    <label for="dailybrowsing">Minutes</label>
+</p>
+</fieldset>
+</div>
+<div class="option">
+<h4>Streaming</h4>
+
+
+
+<fieldset>
+<img src="images/stream_img.png">     
+<div id="sliderdailystreaming" class="slider_width "></div>
+<p class="slider_Value">
+    <input type="text" id="dailystreaming"  placeholder="0" style="border: 0; color: #f6931f; font-weight: bold;"  />
+    <label for="dailystreaming" >Minutes</label>
+</p>
+</fieldset>
+</div>
+
+<div class="option">
+<h4>Online Gaming</h4>
+
+<fieldset>
+<img src="images/game_img.png">     
+<div id="sliderdailygaming" class="slider_width "></div>
+<p class="slider_Value">
+    <input type="text" id="dailygaming" placeholder="0" style="border: 0; color: #f6931f; font-weight: bold;"  />
+    <label for="dailygaming">Minutes</label>
+</p>
+</fieldset>
+</div>
+<div class="option">
+<h4>Video Conference</h4>
+<fieldset>
+<img src="images/video_img.png"> 
+<div id="sliderdailyvideo" class="slider_width "></div>
+<p class="slider_Value">
+     <input type="text" id="dailyvideo" placeholder="0"  style="border: 0; color: #f6931f; font-weight: bold;"  />
+     <label for="dailygaming">Minutes</label>
+</p>
+</fieldset>
+</div>
+<!--
+    <div class="option">
+
+ 
+
+</div>
+-->
+
+
+</form>
+					<!--daily content ends here-->
+				</div>
+			</div>
+
+			<!-- end of t1 -->
+
+
+			<!-- tab 2 -->
+<div class="tab2 tabsContent">
+                <div> 
+                        <form id="price-calculator-pro" action="#">
+
+<div class="option">
+<p><h4>Email Access</h4>
+    
+    <fieldset>
+    <img src="images/email_img.png">        
+<div id="sliderweeklyemail" class="slider_width "></div>
+<p class="slider_Value">
+    
+    <input type="text" id="weeklyemail" placeholder="0" style="border: 0; color: #f6931f; font-weight: bold;" />
+    <label for="weeklyemail">Emails:</label>
+
+</p>
+</fieldset>
+</p>
+
+</div>
+<div class="option">
+<h4>Browsing</h4>
+<fieldset>
+<img src="images/web_img.png">
+<div id="sliderweeklybrowsing" class="slider_width "></div>
+<p class="slider_Value">
+    
+    <input type="text" id="weeklybrowsing" placeholder="0" style="border: 0; color: #f6931f; font-weight: bold;" />
+    <label for="weeklybrowsing">Minutes</label>
+</p>
+</fieldset>
+</div>
+<div class="option">
+<h4>Streaming</h4>
+
+
+
+<fieldset>
+    <img src="images/stream_img.png"> 
+<div id="sliderweeklystreaming" class="slider_width "></div>
+<p class="slider_Value">   
+    <input type="text" id="weeklystreaming" placeholder="0" style="border: 0; color: #f6931f; font-weight: bold;" />
+    <label for="weeklystreaming">Minutes</label>
+</p>
+</fieldset>
+</div>
+
+<div class="option">
+<h4>Online Gaming</h4>
+
+<fieldset>
+    <img src="images/game_img.png"> 
+<div id="sliderweeklygaming" class="slider_width "></div>
+<p class="slider_Value">
+    <input type="text" id="weeklygaming" placeholder="0" style="border: 0; color: #f6931f; font-weight: bold;" />
+    <label for="weeklygaming">Minutes</label>
+
+</p>
+</fieldset>
+</div>
+<div class="option">
+<h4>Video Conference</h4>
+<fieldset>
+    <img src="images/video_img.png"> 
+<div id="sliderweeklyvideo" class="slider_width "></div>
+<p class="slider_Value">  
+    <input type="text" id="weeklyvideo" placeholder="0" style="border: 0; color: #f6931f; font-weight: bold;" />
+    <label for="weeklyvideo">Minutes </label>
+</p>
+</fieldset>
+</div>
+
+
+</form>
+
+                    
+                </div> 
+                
+            </div>  
+            <!-- end of tab 2 -->
+            <!-- tab 3 -->
+            
+			 <div class="tab3 tabsContent">
+				<div> 
+						<form id="price-calculator-pro" action="#">
+
+<div class="option">
+<p><h4>Email Access</h4>
+	
+	<fieldset>
+    <img src="images/email_img.png">   		
+<div id="slidermonthlyemail" class="slider_width "></div>
+<p class="slider_Value">
+    
+    <input type="text" id="monthlyemail" placeholder="0" style="border: 0; color: #f6931f; font-weight: bold;" />
+    <label for="monthlyemail">Emails:</label>
+
+</p>
+</fieldset>
+</p>
+
+</div>
+<div class="option">
+<h4>Browsing</h4>
+<fieldset>
+<img src="images/web_img.png">
+<div id="slidermonthlybrowsing" class="slider_width "></div>
+<p class="slider_Value">
+    
+    <input type="text" id="monthlybrowsing" placeholder="0" style="border: 0; color: #f6931f; font-weight: bold;" />
+    <label for="monthlybrowsing">Minutes</label>
+</p>
+</fieldset>
+</div>
+<div class="option">
+<h4>Streaming</h4>
+
+
+
+<fieldset>
+    <img src="images/stream_img.png"> 
+<div id="slidermonthlystreaming" class="slider_width "></div>
+<p class="slider_Value">   
+    <input type="text" id="monthlystreaming" placeholder="0" style="border: 0; color: #f6931f; font-weight: bold;" />
+    <label for="monthlystreaming">Minutes</label>
+</p>
+</fieldset>
+</div>
+
+<div class="option">
+<h4>Online Gaming</h4>
+
+<fieldset>
+    <img src="images/game_img.png"> 
+<div id="slidermonthlygaming" class="slider_width "></div>
+<p class="slider_Value">
+    <input type="text" id="monthlygaming" placeholder="0" style="border: 0; color: #f6931f; font-weight: bold;" />
+    <label for="monthlygaming">Minutes</label>
+
+</p>
+</fieldset>
+</div>
+<div class="option">
+<h4>Video Conference</h4>
+<fieldset>
+    <img src="images/video_img.png"> 
+<div id="slidermonthlyvideo" class="slider_width "></div>
+<p class="slider_Value">  
+    <input type="text" id="monthlyvideo" placeholder="0" style="border: 0; color: #f6931f; font-weight: bold;" />
+    <label for="monthlyvideo">Minutes </label>
+</p>
+</fieldset>
+</div>
+
+
+</form>
+
+					
+				</div> 
+				
+			</div>  
+            <!-- end of t3 -->
+			</div>
+
+<!-- float right -->
+
+<!-- end of float -->
+        <div class="reset_button"> 
+            <button type="button" >Reset Data Calculator </button>
+            </div>
+		</div>
+        <!--
+                the right menus
+       -->
+       <div class="total-price" >
+            <div id="Suggested_bundle">
+               <h3> Recommend Data Bundle</h3>
+               <div class="data_value">
+                <div id="yoursolutionbg">
+                     <span id="yoursolution"> Adjust the sliders to estimate </span>
+
+                </div>
+               
+                </div>
+                <div class="daily_bundle">
+                <div class="daily_text"> <h3>Your estimated daily data usage is</h3> </div>
+                <div class="bundle">  <p > <span id="dailydata">0</span></p> <p class="inner_text">MB</p> </div> 
+
+            </div>
+
+            <div class="daily_bundle">
+                <div class="daily_text"> <h3>Your estimated Monthly data usage is</h3> </div>
+                <div class="bundle">  <p > <span id="monthlydata">0</span> </p> <p class="inner_text">MB</p> </div> 
+
+            </div>
+
+            </div>
+            
+    
+     
+        <!--
+        based on your daily data usage, your estimated monthly usage is
+    -->
+        
+        
+               <!-- <p>
+                    
+        NB: 1 mb ~ 0.001GB        </p>    
+
+        <hr>
+        
+        suggested bundle; <span id="yoursolution"></span> -->
+    <!---end -->
+       
+        <div class="total-price" >
+       <!-- <div class="amount">
+                <h3 style="font-size: 20px;"> Estimated monthly data usage is
+                <span id="monthly-cost">0</span> GB</h3>
+            </div> -->
+            <div class="info_container">
+        
+        
+        <p> *The data figures are examples of typical use and are intended as a guide only based on the following assumptions:</p>
+        <p> 
+      <strong> Email </strong>   (text only) = 50 KB </br>
+    <strong> Email </strong> (w/attach.) = 4 MB </br>
+    <strong> Web page browsing </strong>  = 400 KB</br>
+    <strong> Music streaming </strong>  = 1 MB per minute</br>
+   <strong> Video streaming </strong>  (Standard def) = 7 MB per minute</br>
+   <strong> Photo download/upload </strong>  (Hi-Res) = 4 MB</br>
+   <strong> Music download and upload </strong>  = 6 MB per music file </br>
+   <strong> 3G VoIP</strong> = 1 MB per minute </br>
+   <strong> 3G VoIP with Video </strong> = 8 MB per minute </br>
+   <strong> Online gaming</strong> = 150 MB per hour </br>
+   <strong>1 MB</strong> = 1,024 KB </br>
+   <strong>1 GB</strong> = 1,024 MB </br>
+    </p> 
+        
+        </div>
+        </div>
+        
+     <!--
+        <div class="info_container">
+        
+        
+        
+        
+        </div>
+    -->
+
+
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+</div>
+
+
+
+<link rel="stylesheet" href="js/jquery-ui.css">
+<link href="style.css"	rel="stylesheet" type="text/css" media="screen" />
+
+<style>#slider { margin: 10px; }  </style>
+<script src="js/jquery-1.8.3.js"></script>
+<script src="js/jquery-ui.js"></script>
+<script type="text/javascript" src="js/sliders.js"></script>
+<!--
+<link rel="stylesheet" href="h5bp.css" />
+<link rel="stylesheet" href="jquery-price-calculator-pro-1.0.css" />
+<script type="text/javascript" src="js/dailyemail.js"></script>
+<script type="text/javascript" src="js/dailybrowsing.js"></script>
+<script type="text/javascript" src="js/dailystreaming.js"></script>
+<script type="text/javascript" src="js/dailygaming.js"></script>
+<script type="text/javascript" src="js/dailyvideoconf.js"></script>
+<script type="text/javascript" src="js/dailyvideoconf.js"></script>
+
+<script type="text/javascript" src="common/javascript/script.js"></script>
+
+<script type="text/javascript" src="js/jquery-price-calculator-pro-min-1.0.js"></script>
+
+<script type="text/javascript">
+$(function(){
+	$('#price-calculator-pro').bPrice();
+});
+</script>
+-->
+</body>
+</html>
