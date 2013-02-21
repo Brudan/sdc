@@ -1,4 +1,3 @@
-
 body {
 	font-family:  'Lato', PT Sans,sans-serif;
 	color: #92919A;
@@ -247,7 +246,7 @@ fieldset img {
 
 .slider_Value input[type="text"] {
 	float: left;
-	width: 30px;
+	width: 40px;
 	font-size: 18px;
 	font-weight: bold;
 	color: #6DB61F;
