@@ -368,6 +368,14 @@ var slidermonthlybrowsing = $( "#slidermonthlybrowsing" ).slider({
 	});
 
 
+$('#submit_btn').click(function(){
+    $(".slider_width").slider("value", 0);
+    $(".for_reset").val("0");
+    myFunction(0);
+    $("#monthlydata").text("0");
+    $("#dailydata").text("0");
+});
+
 var response = '';
 var estimatedusage = estimatedMonthlyfromDaily;
 
