@@ -451,30 +451,77 @@ function myFunction2(estimatedMonthly)
 
 function myFunction3(estimatedMonthly)
 {
-    var response = 'no bundle';
     var estimatedusage = estimatedMonthly;
-    if (estimatedusage > 0){       
-        response= '25,000 for 500MB Monthly';
-    }
-    if (estimatedusage > 0.5) {
-        response= '45,000 for 1GB Monthly';
-    }
-    if (estimatedusage > 1) {
-        response= '85,000 for 3GB Monthly'; 
-    }
-    if (estimatedusage > 3) {
-        response= '150,000 for 10GB Monthly';
-    }
-    if (estimatedusage > 10) {
-        response= '250,000 for 20GB Monthly';
-    }
-    if (estimatedusage > 20) {
-        response= '530,000 for 50GB Monthly';
-    }
+    var response = smart_suggestions(estimatedusage, ' ', 0);
+    if(response.trim() == '') response = 'no bundle';
     $("#yoursolution").text(response);
-    //$("#monthlydata").text(estimatedMonthly)
-//    $("#yoursolution").text("initial");
 }
+
+var bundle_data = {0: [50, 530000, '530,000 for 50GB Monthly\n'],
+                   1: [20, 250000, '250,000 for 20GB Monthly\n'],
+                   2: [10, 150000, '150,000 for 10GB Monthly\n'],
+                   3: [3, 85000, '85,000 for 3GB Monthly\n'],
+                   4: [1, 45000, '45,000 for 1GB Monthly\n'],
+                   5: [0.5, 25000, '25,000 for 500MB Monthly\n']
+                  };
+
+/** 
+* from the list of bundles available, this function sums up the 
+* GBs starting from the index specified as the function parameter
+*/
+function sum_items(start_index){
+    var sum = 0;
+    var index = start_index;
+    for (index; index < 6; index++){
+        sum += bundle_data[index][0];
+    }
+    return sum;
+}
+
+/** 
+* from the list of bundles available, this function sums up the 
+* prices starting from the index specified as the function parameter.
+*/
+function sum_bundle_prices(start_index){
+    var sum = 0;
+    var index = start_index;
+    for (index; index < 6; index++){
+        sum += bundle_data[index][1];
+    }
+    return sum;
+}
+
+/**
+* recursive function to determine what combination  
+* of bundles suit the user's estimate
+*/
+function smart_suggestions(estimatedusage, response, start_index_for_search){
+    var index = start_index_for_search;
+    //if it's the last item in the list of bundles...
+    if(index == 5){
+        //if it's a valid value, return the response for 500MB
+        if(estimatedusage > 0){
+            response += bundle_data[index][2];            
+        } else {   //otherwise return an empty string
+            response += ' ';
+        } 
+        return response;       
+    } else { //if it's not the last item in the list of bundles...
+        if(estimatedusage > sum_items(index+1)){
+            //if the estimate, is bigger than the bundle we're currently checking, add the response for the current bundle
+            //and recurse down the list to match the remaining estimate
+            response += bundle_data[index][2];
+            return smart_suggestions((estimatedusage - bundle_data[index][0]), response, index+1);        
+        } else {
+            //if the estimate, is bigger than the bundle we're currently checking, skip this bundle and recurse down the list
+            //to check if any other bundles match
+            return smart_suggestions(estimatedusage, response, index+1);
+        }
+    
+    }
+    
+}
+
 
 function monthlyFunction(Monthlyusage)
 {
