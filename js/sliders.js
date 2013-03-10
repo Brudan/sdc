@@ -15,8 +15,8 @@ $( "#sliderdailyvideo" ).slider({
 		slide: function( event, ui ) {
                 $( "#dailyvideo" ).val( ui.value );
                 var estimatedDailyVideo = Math.round(100 * (parseFloat(ui.value)  * 2.27)) / 100;
-                estimatedDaily = Math.round(100 * (ui.value * 2.27 + $('#sliderdailyemail').slider("value") * 0.05 + $('#sliderdailybrowsing').slider("value") * 0.94 + $('#sliderdailystreaming').slider("value") * 23.52 + $('#sliderdailygaming').slider("value") * 1.51)) / 100;
-                estimatedMonthlyfromDaily = Math.round(100 * 30 * (ui.value * 2.27 + $('#sliderdailyemail').slider("value") * 0.05 + $('#sliderdailybrowsing').slider("value") * 0.94 + $('#sliderdailystreaming').slider("value") * 23.52 + $('#sliderdailygaming').slider("value") * 1.51)) / 100;
+                estimatedDaily = Math.round(100 * (ui.value * 2.27 + $('#sliderdailyemail').slider("value") * 0.05 + $('#sliderdailybrowsing').slider("value") * 0.94 + $('#sliderdailystreaming').slider("value") * 23.52 + $('#sliderdailygaming').slider("value") * 1.51)) / 100000;
+                estimatedMonthlyfromDaily = Math.round(100 * 30 * (ui.value * 2.27 + $('#sliderdailyemail').slider("value") * 0.05 + $('#sliderdailybrowsing').slider("value") * 0.94 + $('#sliderdailystreaming').slider("value") * 23.52 + $('#sliderdailygaming').slider("value") * 1.51)) / 100000;
 
             myFunction(estimatedMonthlyfromDaily);
             monthlyFunction(estimatedMonthlyfromDaily);
@@ -42,8 +42,8 @@ $( "#sliderdailyemail" ).slider({
 		slide: function( event, ui ) {
                 $("#dailyemail").val( ui.value );
                 var estimatedDailyEmail = Math.round(100 * (parseFloat(ui.value)  * 0.05)) / 100;
-                estimatedDaily = Math.round(100 * (ui.value * 0.05 + $('#sliderdailyvideo').slider("value") * 2.27 + $('#sliderdailybrowsing').slider("value") * 0.94 + $('#sliderdailystreaming').slider("value") * 23.52 + $('#sliderdailygaming').slider("value") * 1.51)) / 100;
-                estimatedMonthlyfromDaily = Math.round(100 * 30 * (ui.value * 0.05 + $('#sliderdailyvideo').slider("value") * 2.27 + $('#sliderdailybrowsing').slider("value") * 0.94 + $('#sliderdailystreaming').slider("value") * 23.52 + $('#sliderdailygaming').slider("value") * 1.51)) / 100;
+                estimatedDaily = Math.round(100 * (ui.value * 0.05 + $('#sliderdailyvideo').slider("value") * 2.27 + $('#sliderdailybrowsing').slider("value") * 0.94 + $('#sliderdailystreaming').slider("value") * 23.52 + $('#sliderdailygaming').slider("value") * 1.51)) / 100000;
+                estimatedMonthlyfromDaily = Math.round(100 * 30 * (ui.value * 0.05 + $('#sliderdailyvideo').slider("value") * 2.27 + $('#sliderdailybrowsing').slider("value") * 0.94 + $('#sliderdailystreaming').slider("value") * 23.52 + $('#sliderdailygaming').slider("value") * 1.51)) / 100000;
 
             myFunction(estimatedMonthlyfromDaily);
             monthlyFunction(estimatedMonthlyfromDaily);
@@ -68,8 +68,8 @@ $( "#sliderdailygaming" ).slider({
 		slide: function( event, ui ) {
                 $( "#dailygaming" ).val( ui.value );
                 var estimatedDailyGaming = Math.round(100 * (parseFloat(ui.value)  * 1.51)) / 100;
-                estimatedDaily = Math.round(100 * (ui.value * 1.51 + $('#sliderdailyemail').slider("value") * 0.05 + $('#sliderdailybrowsing').slider("value") * 0.94 + $('#sliderdailystreaming').slider("value") * 23.52 + $('#sliderdailyvideo').slider("value") * 2.27) ) / 100;
-                estimatedMonthlyfromDaily = Math.round(100 * 30 * (ui.value * 1.51 + $('#sliderdailyemail').slider("value") * 0.05 + $('#sliderdailybrowsing').slider("value") * 0.94 + $('#sliderdailystreaming').slider("value") * 23.52 + $('#sliderdailyvideo').slider("value") * 2.27) ) / 100;
+                estimatedDaily = Math.round(100 * (ui.value * 1.51 + $('#sliderdailyemail').slider("value") * 0.05 + $('#sliderdailybrowsing').slider("value") * 0.94 + $('#sliderdailystreaming').slider("value") * 23.52 + $('#sliderdailyvideo').slider("value") * 2.27) ) / 100000;
+                estimatedMonthlyfromDaily = Math.round(100 * 30 * (ui.value * 1.51 + $('#sliderdailyemail').slider("value") * 0.05 + $('#sliderdailybrowsing').slider("value") * 0.94 + $('#sliderdailystreaming').slider("value") * 23.52 + $('#sliderdailyvideo').slider("value") * 2.27) ) / 100000;
 
             myFunction(estimatedMonthlyfromDaily);
             monthlyFunction(estimatedMonthlyfromDaily);
@@ -91,8 +91,8 @@ $( "#sliderdailystreaming" ).slider({
 		slide: function( event, ui ) {
                 $( "#dailystreaming" ).val( ui.value );
                 var estimatedDailyStreaming = Math.round(100 * (parseFloat(ui.value)  * 23.52)) / 100;
-                estimatedDaily = Math.round(100 * (ui.value * 23.52 + $('#sliderdailyemail').slider("value") * 0.05 + $('#sliderdailybrowsing').slider("value") * 0.94 + $('#sliderdailyvideo').slider("value") * 2.27 + $('#sliderdailygaming').slider("value") * 1.51) ) / 100;
-                estimatedMonthlyfromDaily = Math.round(100 * 30 * (ui.value * 23.52 + $('#sliderdailyemail').slider("value") * 0.05 + $('#sliderdailybrowsing').slider("value") * 0.94 + $('#sliderdailyvideo').slider("value") * 2.27 + $('#sliderdailygaming').slider("value") * 1.51) ) / 100;
+                estimatedDaily = Math.round(100 * (ui.value * 23.52 + $('#sliderdailyemail').slider("value") * 0.05 + $('#sliderdailybrowsing').slider("value") * 0.94 + $('#sliderdailyvideo').slider("value") * 2.27 + $('#sliderdailygaming').slider("value") * 1.51) ) / 100000;
+                estimatedMonthlyfromDaily = Math.round(100 * 30 * (ui.value * 23.52 + $('#sliderdailyemail').slider("value") * 0.05 + $('#sliderdailybrowsing').slider("value") * 0.94 + $('#sliderdailyvideo').slider("value") * 2.27 + $('#sliderdailygaming').slider("value") * 1.51) ) / 100000;
 
             myFunction(estimatedMonthlyfromDaily);
             monthlyFunction(estimatedMonthlyfromDaily);
@@ -114,8 +114,8 @@ $( "#sliderdailybrowsing" ).slider({
 		slide: function( event, ui ) {
                 $( "#dailybrowsing" ).val( ui.value );
                 var estimatedDailyBrowsing = Math.round(100 * (parseFloat(ui.value)  * 0.94)) / 100;
-                estimatedDaily = Math.round(100 * (ui.value * 0.94 + $('#sliderdailyemail').slider("value") * 0.05 + $('#sliderdailyvideo').slider("value") * 2.27 + $('#sliderdailystreaming').slider("value") * 23.52 + $('#sliderdailygaming').slider("value") * 1.51) ) / 100;
-                estimatedMonthlyfromDaily = Math.round(100 * 30 * (ui.value * 0.94 + $('#sliderdailyemail').slider("value") * 0.05 + $('#sliderdailyvideo').slider("value") * 2.27 + $('#sliderdailystreaming').slider("value") * 23.52 + $('#sliderdailygaming').slider("value") * 1.51) ) / 100;
+                estimatedDaily = Math.round(100 * (ui.value * 0.94 + $('#sliderdailyemail').slider("value") * 0.05 + $('#sliderdailyvideo').slider("value") * 2.27 + $('#sliderdailystreaming').slider("value") * 23.52 + $('#sliderdailygaming').slider("value") * 1.51) ) / 100000;
+                estimatedMonthlyfromDaily = Math.round(100 * 30 * (ui.value * 0.94 + $('#sliderdailyemail').slider("value") * 0.05 + $('#sliderdailyvideo').slider("value") * 2.27 + $('#sliderdailystreaming').slider("value") * 23.52 + $('#sliderdailygaming').slider("value") * 1.51) ) / 100000;
 
             myFunction(estimatedMonthlyfromDaily);
             monthlyFunction(estimatedMonthlyfromDaily);
@@ -137,9 +137,9 @@ $( "#sliderweeklyvideo" ).slider({
         slide: function( event, ui ) {
                 $( "#weeklyvideo" ).val( ui.value );
                 var estimatedweeklyVideo = Math.round(100 * (parseFloat(ui.value)  * 2.27)) / 100;
-                estimatedweekly = Math.round(100 * (ui.value * 2.27 + $('#sliderweeklyemail').slider("value") * 0.05 + $('#sliderweeklybrowsing').slider("value") * 0.94 + $('#sliderweeklystreaming').slider("value") * 23.52 + $('#sliderweeklygaming').slider("value") * 1.51)) / 100;
-                estimatedMonthlyfromweekly = Math.round(100 * 30 * (ui.value * 2.27 + $('#sliderweeklyemail').slider("value") * 0.05 + $('#sliderweeklybrowsing').slider("value") * 0.94 + $('#sliderweeklystreaming').slider("value") * 23.52 + $('#sliderweeklygaming').slider("value") * 1.51)) / 100;
-                estimatedDailyfromweekly = Math.round(100 * 100 * (ui.value * 2.27 + $('#sliderweeklyemail').slider("value") * 0.05 + $('#sliderweeklybrowsing').slider("value") * 0.94 + $('#sliderweeklystreaming').slider("value") * 23.52 + $('#sliderweeklygaming').slider("value") * 1.51) / 700) / 100;
+                estimatedweekly = Math.round(100 * (ui.value * 2.27 + $('#sliderweeklyemail').slider("value") * 0.05 + $('#sliderweeklybrowsing').slider("value") * 0.94 + $('#sliderweeklystreaming').slider("value") * 23.52 + $('#sliderweeklygaming').slider("value") * 1.51)) / 100000;
+                estimatedMonthlyfromweekly = Math.round(100 * 30 * (ui.value * 2.27 + $('#sliderweeklyemail').slider("value") * 0.05 + $('#sliderweeklybrowsing').slider("value") * 0.94 + $('#sliderweeklystreaming').slider("value") * 23.52 + $('#sliderweeklygaming').slider("value") * 1.51)) / 700000;
+                estimatedDailyfromweekly = Math.round(100 * 100 * (ui.value * 2.27 + $('#sliderweeklyemail').slider("value") * 0.05 + $('#sliderweeklybrowsing').slider("value") * 0.94 + $('#sliderweeklystreaming').slider("value") * 23.52 + $('#sliderweeklygaming').slider("value") * 1.51) / 700) / 100000;
                 
             myFunction2(estimatedMonthlyfromweekly);
             monthlyFunction2(estimatedMonthlyfromweekly);
@@ -165,9 +165,9 @@ $( "#sliderweeklyemail" ).slider({
         slide: function( event, ui ) {
                 $("#weeklyemail").val( ui.value );
                 var estimatedweeklyEmail = Math.round(100 * (parseFloat(ui.value)  * 0.05)) / 100;
-                estimatedweekly = Math.round(100 * (ui.value * 0.05 + $('#sliderweeklyvideo').slider("value") * 2.27 + $('#sliderweeklybrowsing').slider("value") * 0.94 + $('#sliderweeklystreaming').slider("value") * 23.52 + $('#sliderweeklygaming').slider("value") * 1.51)) / 100;
-                estimatedMonthlyfromweekly = Math.round(100 * 30 * (ui.value * 0.05 + $('#sliderweeklyvideo').slider("value") * 2.27 + $('#sliderweeklybrowsing').slider("value") * 0.94 + $('#sliderweeklystreaming').slider("value") * 23.52 + $('#sliderweeklygaming').slider("value") * 1.51)) / 100;
-                estimatedDailyfromweekly = Math.round(100 * 100 * (ui.value * 0.05 + $('#sliderweeklyvideo').slider("value") * 2.27 + $('#sliderweeklybrowsing').slider("value") * 0.94 + $('#sliderweeklystreaming').slider("value") * 23.52 + $('#sliderweeklygaming').slider("value") * 1.51) / 700) / 100;
+                estimatedweekly = Math.round(100 * (ui.value * 0.05 + $('#sliderweeklyvideo').slider("value") * 2.27 + $('#sliderweeklybrowsing').slider("value") * 0.94 + $('#sliderweeklystreaming').slider("value") * 23.52 + $('#sliderweeklygaming').slider("value") * 1.51)) / 100000;
+                estimatedMonthlyfromweekly = Math.round(100 * 30 * (ui.value * 0.05 + $('#sliderweeklyvideo').slider("value") * 2.27 + $('#sliderweeklybrowsing').slider("value") * 0.94 + $('#sliderweeklystreaming').slider("value") * 23.52 + $('#sliderweeklygaming').slider("value") * 1.51)) / 700000;
+                estimatedDailyfromweekly = Math.round(100 * 100 * (ui.value * 0.05 + $('#sliderweeklyvideo').slider("value") * 2.27 + $('#sliderweeklybrowsing').slider("value") * 0.94 + $('#sliderweeklystreaming').slider("value") * 23.52 + $('#sliderweeklygaming').slider("value") * 1.51) / 700) / 100000;
                 
             myFunction2(estimatedMonthlyfromweekly);
             monthlyFunction2(estimatedMonthlyfromweekly);
@@ -192,9 +192,9 @@ $( "#sliderweeklygaming" ).slider({
         slide: function( event, ui ) {
                 $( "#weeklygaming" ).val( ui.value );
                 var estimatedweeklyGaming = Math.round(100 * (parseFloat(ui.value)  * 1.51)) / 100;
-                estimatedweekly = Math.round(100 * (ui.value * 1.51 + $('#sliderweeklyemail').slider("value") * 0.05 + $('#sliderweeklybrowsing').slider("value") * 0.94 + $('#sliderweeklystreaming').slider("value") * 23.52 + $('#sliderweeklyvideo').slider("value") * 2.27) ) / 100;
-                estimatedMonthlyfromweekly = Math.round(100 * 30 * (ui.value * 1.51 + $('#sliderweeklyemail').slider("value") * 0.05 + $('#sliderweeklybrowsing').slider("value") * 0.94 + $('#sliderweeklystreaming').slider("value") * 23.52 + $('#sliderweeklyvideo').slider("value") * 2.27) ) / 100;
-                estimatedDailyfromweekly = Math.round(100 * 100 *(ui.value * 1.51 + $('#sliderweeklyemail').slider("value") * 0.05 + $('#sliderweeklybrowsing').slider("value") * 0.94 + $('#sliderweeklystreaming').slider("value") * 23.52 + $('#sliderweeklyvideo').slider("value") * 2.27) / 700 ) / 100;
+                estimatedweekly = Math.round(100 * (ui.value * 1.51 + $('#sliderweeklyemail').slider("value") * 0.05 + $('#sliderweeklybrowsing').slider("value") * 0.94 + $('#sliderweeklystreaming').slider("value") * 23.52 + $('#sliderweeklyvideo').slider("value") * 2.27) ) / 100000;
+                estimatedMonthlyfromweekly = Math.round(100 * 30 * (ui.value * 1.51 + $('#sliderweeklyemail').slider("value") * 0.05 + $('#sliderweeklybrowsing').slider("value") * 0.94 + $('#sliderweeklystreaming').slider("value") * 23.52 + $('#sliderweeklyvideo').slider("value") * 2.27) ) / 700000;
+                estimatedDailyfromweekly = Math.round(100 * 100 *(ui.value * 1.51 + $('#sliderweeklyemail').slider("value") * 0.05 + $('#sliderweeklybrowsing').slider("value") * 0.94 + $('#sliderweeklystreaming').slider("value") * 23.52 + $('#sliderweeklyvideo').slider("value") * 2.27) / 700 ) / 100000;
                 
             myFunction2(estimatedMonthlyfromweekly);
             monthlyFunction2(estimatedMonthlyfromweekly);
@@ -216,9 +216,9 @@ $( "#sliderweeklystreaming" ).slider({
         slide: function( event, ui ) {
                 $( "#weeklystreaming" ).val( ui.value );
                 var estimatedweeklyStreaming = Math.round(100 * (parseFloat(ui.value)  * 23.52)) / 100;
-                estimatedweekly = Math.round(100 * (ui.value * 23.52 + $('#sliderweeklyemail').slider("value") * 0.05 + $('#sliderweeklybrowsing').slider("value") * 0.94 + $('#sliderweeklyvideo').slider("value") * 2.27 + $('#sliderweeklygaming').slider("value") * 1.51) ) / 100;
-                estimatedMonthlyfromweekly = Math.round(100 * 30 * (ui.value * 23.52 + $('#sliderweeklyemail').slider("value") * 0.05 + $('#sliderweeklybrowsing').slider("value") * 0.94 + $('#sliderweeklyvideo').slider("value") * 2.27 + $('#sliderweeklygaming').slider("value") * 1.51) ) / 100;
-                estimatedDailyfromweekly = Math.round(100 * 100 * (ui.value * 23.52 + $('#sliderweeklyemail').slider("value") * 0.05 + $('#sliderweeklybrowsing').slider("value") * 0.94 + $('#sliderweeklyvideo').slider("value") * 2.27 + $('#sliderweeklygaming').slider("value") * 1.51) / 700 ) / 100;
+                estimatedweekly = Math.round(100 * (ui.value * 23.52 + $('#sliderweeklyemail').slider("value") * 0.05 + $('#sliderweeklybrowsing').slider("value") * 0.94 + $('#sliderweeklyvideo').slider("value") * 2.27 + $('#sliderweeklygaming').slider("value") * 1.51) ) / 100000;
+                estimatedMonthlyfromweekly = Math.round(100 * 30 * (ui.value * 23.52 + $('#sliderweeklyemail').slider("value") * 0.05 + $('#sliderweeklybrowsing').slider("value") * 0.94 + $('#sliderweeklyvideo').slider("value") * 2.27 + $('#sliderweeklygaming').slider("value") * 1.51) ) / 700000;
+                estimatedDailyfromweekly = Math.round(100 * 100 * (ui.value * 23.52 + $('#sliderweeklyemail').slider("value") * 0.05 + $('#sliderweeklybrowsing').slider("value") * 0.94 + $('#sliderweeklyvideo').slider("value") * 2.27 + $('#sliderweeklygaming').slider("value") * 1.51) / 700 ) / 100000;
                 
             myFunction2(estimatedMonthlyfromweekly);
             monthlyFunction2(estimatedMonthlyfromweekly);
@@ -240,9 +240,9 @@ $( "#sliderweeklybrowsing" ).slider({
         slide: function( event, ui ) {
                 $( "#weeklybrowsing" ).val( ui.value );
                 var estimatedweeklyBrowsing = Math.round(100 * (parseFloat(ui.value)  * 0.94)) / 100;
-                estimatedweekly = Math.round(100 * (ui.value * 0.94 + $('#sliderweeklyemail').slider("value") * 0.05 + $('#sliderweeklyvideo').slider("value") * 2.27 + $('#sliderweeklystreaming').slider("value") * 23.52 + $('#sliderweeklygaming').slider("value") * 1.51) ) / 100;
-                estimatedMonthlyfromweekly = Math.round(100 * 30 * (ui.value * 0.94 + $('#sliderweeklyemail').slider("value") * 0.05 + $('#sliderweeklyvideo').slider("value") * 2.27 + $('#sliderweeklystreaming').slider("value") * 23.52 + $('#sliderweeklygaming').slider("value") * 1.51) ) / 100;
-                estimatedDailyfromweekly = Math.round(100 * 100 * (ui.value * 0.94 + $('#sliderweeklyemail').slider("value") * 0.05 + $('#sliderweeklyvideo').slider("value") * 2.27 + $('#sliderweeklystreaming').slider("value") * 23.52 + $('#sliderweeklygaming').slider("value") * 1.51) / 700) / 100;
+                estimatedweekly = Math.round(100 * (ui.value * 0.94 + $('#sliderweeklyemail').slider("value") * 0.05 + $('#sliderweeklyvideo').slider("value") * 2.27 + $('#sliderweeklystreaming').slider("value") * 23.52 + $('#sliderweeklygaming').slider("value") * 1.51) ) / 100000;
+                estimatedMonthlyfromweekly = Math.round(100 * 30 * (ui.value * 0.94 + $('#sliderweeklyemail').slider("value") * 0.05 + $('#sliderweeklyvideo').slider("value") * 2.27 + $('#sliderweeklystreaming').slider("value") * 23.52 + $('#sliderweeklygaming').slider("value") * 1.51) ) / 700000;
+                estimatedDailyfromweekly = Math.round(100 * 100 * (ui.value * 0.94 + $('#sliderweeklyemail').slider("value") * 0.05 + $('#sliderweeklyvideo').slider("value") * 2.27 + $('#sliderweeklystreaming').slider("value") * 23.52 + $('#sliderweeklygaming').slider("value") * 1.51) / 700) / 100000;
                 
             myFunction2(estimatedMonthlyfromweekly);
             monthlyFunction2(estimatedMonthlyfromweekly);
@@ -267,8 +267,8 @@ var slidermonthlyvideo = $( "#slidermonthlyvideo" ).slider({
                 $( "#monthlyvideo" ).val( ui.value );
                 var estimatedMonthlyVideo = Math.round(100 * (parseFloat(ui.value)  * 0.0022737)) / 100;
                 var estimatedMonthly = Math.round(100 * (ui.value * 0.0022737 + $('#slidermonthlyemail').slider("value") * 0.000049 + $('#slidermonthlybrowsing').slider("value") * 0.0009357 + $('#slidermonthlystreaming').slider("value") * 0.0235243 + $('#slidermonthlygaming').slider("value") * 0.001513) ) / 100;
-                estimatedMonthlyMBS = Math.round(100 * 1024 * (ui.value * 0.0022737 + $('#slidermonthlyemail').slider("value") * 0.000049 + $('#slidermonthlybrowsing').slider("value") * 0.0009357 + $('#slidermonthlystreaming').slider("value") * 0.0235243 + $('#slidermonthlygaming').slider("value") * 0.001513) ) / 100;
-                estimatedDailyfrommonthly = Math.round(100 * 100024 * (ui.value * 0.0022737 + $('#slidermonthlyemail').slider("value") * 0.000049 + $('#slidermonthlybrowsing').slider("value") * 0.0009357 + $('#slidermonthlystreaming').slider("value") * 0.0235243 + $('#slidermonthlygaming').slider("value") * 0.001513) / 3000) / 100;
+                estimatedMonthlyMBS = Math.round(100 * 1024 * (ui.value * 0.0022737 + $('#slidermonthlyemail').slider("value") * 0.000049 + $('#slidermonthlybrowsing').slider("value") * 0.0009357 + $('#slidermonthlystreaming').slider("value") * 0.0235243 + $('#slidermonthlygaming').slider("value") * 0.001513) ) / 100000;
+                estimatedDailyfrommonthly = Math.round(100 * 100024 * (ui.value * 0.0022737 + $('#slidermonthlyemail').slider("value") * 0.000049 + $('#slidermonthlybrowsing').slider("value") * 0.0009357 + $('#slidermonthlystreaming').slider("value") * 0.0235243 + $('#slidermonthlygaming').slider("value") * 0.001513) / 3000) / 100000;
             
             myFunction3(estimatedMonthly);
             monthlyFunction3(estimatedMonthlyMBS);
@@ -290,8 +290,8 @@ var slidermonthlyemail = $( "#slidermonthlyemail" ).slider({
                 $( "#monthlyemail" ).val( ui.value );
                 var estimatedMonthlyEmail = Math.round(100 * (parseFloat(ui.value)  * 0.000049)) / 100;
                 var estimatedMonthly = Math.round(100 * (ui.value * 0.000049 + $('#slidermonthlyvideo').slider("value") * 0.0022737 + $('#slidermonthlybrowsing').slider("value") * 0.0009357 + $('#slidermonthlystreaming').slider("value") * 0.0235243 + $('#slidermonthlygaming').slider("value") * 0.001513) ) / 100;
-                estimatedMonthlyMBS = Math.round(100 * 1024 * (ui.value * 0.000049 + $('#slidermonthlyvideo').slider("value") * 0.0022737 + $('#slidermonthlybrowsing').slider("value") * 0.0009357 + $('#slidermonthlystreaming').slider("value") * 0.0235243 + $('#slidermonthlygaming').slider("value") * 0.001513) ) / 100;
-                estimatedDailyfrommonthly = Math.round(100 * 100024 * (ui.value * 0.000049 + $('#slidermonthlyvideo').slider("value") * 0.0022737 + $('#slidermonthlybrowsing').slider("value") * 0.0009357 + $('#slidermonthlystreaming').slider("value") * 0.0235243 + $('#slidermonthlygaming').slider("value") * 0.001513) /3000 ) / 100;
+                estimatedMonthlyMBS = Math.round(100 * 1024 * (ui.value * 0.000049 + $('#slidermonthlyvideo').slider("value") * 0.0022737 + $('#slidermonthlybrowsing').slider("value") * 0.0009357 + $('#slidermonthlystreaming').slider("value") * 0.0235243 + $('#slidermonthlygaming').slider("value") * 0.001513) ) / 100000;
+                estimatedDailyfrommonthly = Math.round(100 * 100024 * (ui.value * 0.000049 + $('#slidermonthlyvideo').slider("value") * 0.0022737 + $('#slidermonthlybrowsing').slider("value") * 0.0009357 + $('#slidermonthlystreaming').slider("value") * 0.0235243 + $('#slidermonthlygaming').slider("value") * 0.001513) /3000 ) / 100000;
             
             myFunction3(estimatedMonthly);
             monthlyFunction3(estimatedMonthlyMBS);
@@ -312,8 +312,8 @@ var slidermonthlygaming = $( "#slidermonthlygaming" ).slider({
                 $( "#monthlygaming" ).val( ui.value );
                 var estimatedMonthlyGaming = Math.round(100 * (parseFloat(ui.value)  * 0.001513)) / 100;
                 var estimatedMonthly = Math.round(100 * (ui.value * 0.001513 + $('#slidermonthlyemail').slider("value") * 0.000049 + $('#slidermonthlybrowsing').slider("value") * 0.0009357 + $('#slidermonthlystreaming').slider("value") * 0.0235243 + $('#slidermonthlyvideo').slider("value") * 0.0022737) ) / 100;
-                estimatedMonthlyMBS = Math.round(100 * 1024 * (ui.value * 0.001513 + $('#slidermonthlyemail').slider("value") * 0.000049 + $('#slidermonthlybrowsing').slider("value") * 0.0009357 + $('#slidermonthlystreaming').slider("value") * 0.0235243 + $('#slidermonthlyvideo').slider("value") * 0.0022737) ) / 100;
-                estimatedDailyfrommonthly = Math.round(100 * 100024 * (ui.value * 0.001513 + $('#slidermonthlyemail').slider("value") * 0.000049 + $('#slidermonthlybrowsing').slider("value") * 0.0009357 + $('#slidermonthlystreaming').slider("value") * 0.0235243 + $('#slidermonthlyvideo').slider("value") * 0.0022737) / 3000) / 100;
+                estimatedMonthlyMBS = Math.round(100 * 1024 * (ui.value * 0.001513 + $('#slidermonthlyemail').slider("value") * 0.000049 + $('#slidermonthlybrowsing').slider("value") * 0.0009357 + $('#slidermonthlystreaming').slider("value") * 0.0235243 + $('#slidermonthlyvideo').slider("value") * 0.0022737) ) / 100000;
+                estimatedDailyfrommonthly = Math.round(100 * 100024 * (ui.value * 0.001513 + $('#slidermonthlyemail').slider("value") * 0.000049 + $('#slidermonthlybrowsing').slider("value") * 0.0009357 + $('#slidermonthlystreaming').slider("value") * 0.0235243 + $('#slidermonthlyvideo').slider("value") * 0.0022737) / 3000) / 100000;
             
             myFunction3(estimatedMonthly);
             monthlyFunction3(estimatedMonthlyMBS);
@@ -334,8 +334,8 @@ var slidermonthlystreaming = $( "#slidermonthlystreaming" ).slider({
                 $( "#monthlystreaming" ).val( ui.value );
                 var estimatedMonthlyStreaming = Math.round(100 * (parseFloat(ui.value)  * 0.0235243)) / 100;
                 var estimatedMonthly = Math.round(100 * (ui.value * 0.0235243 + $('#slidermonthlyemail').slider("value") * 0.000049 + $('#slidermonthlybrowsing').slider("value") * 0.0009357 + $('#slidermonthlyvideo').slider("value") * 0.0022737 + $('#slidermonthlygaming').slider("value") * 0.001513) ) / 100;
-                estimatedMonthlyMBS = Math.round(100 * 1024 * (ui.value * 0.0235243 + $('#slidermonthlyemail').slider("value") * 0.000049 + $('#slidermonthlybrowsing').slider("value") * 0.0009357 + $('#slidermonthlyvideo').slider("value") * 0.0022737 + $('#slidermonthlygaming').slider("value") * 0.001513) ) / 100;
-                estimatedDailyfrommonthly = Math.round(100 * 100024 * (ui.value * 0.0235243 + $('#slidermonthlyemail').slider("value") * 0.000049 + $('#slidermonthlybrowsing').slider("value") * 0.0009357 + $('#slidermonthlyvideo').slider("value") * 0.0022737 + $('#slidermonthlygaming').slider("value") * 0.001513) / 3000) / 100;
+                estimatedMonthlyMBS = Math.round(100 * 1024 * (ui.value * 0.0235243 + $('#slidermonthlyemail').slider("value") * 0.000049 + $('#slidermonthlybrowsing').slider("value") * 0.0009357 + $('#slidermonthlyvideo').slider("value") * 0.0022737 + $('#slidermonthlygaming').slider("value") * 0.001513) ) / 100000;
+                estimatedDailyfrommonthly = Math.round(100 * 100024 * (ui.value * 0.0235243 + $('#slidermonthlyemail').slider("value") * 0.000049 + $('#slidermonthlybrowsing').slider("value") * 0.0009357 + $('#slidermonthlyvideo').slider("value") * 0.0022737 + $('#slidermonthlygaming').slider("value") * 0.001513) / 3000) / 100000;
                 
             myFunction3(estimatedMonthly);
             monthlyFunction3(estimatedMonthlyMBS);
@@ -356,8 +356,8 @@ var slidermonthlybrowsing = $( "#slidermonthlybrowsing" ).slider({
                 $( "#monthlybrowsing" ).val( ui.value );
                 var estimatedMonthlyBrowsing = Math.round(100 * (parseFloat(ui.value)  * 0.0009357)) / 100;
                 var estimatedMonthly = Math.round(100 * (ui.value * 0.0009357 + $('#slidermonthlyemail').slider("value") * 0.000049 + $('#slidermonthlyvideo').slider("value") * 0.0022737 + $('#slidermonthlystreaming').slider("value") * 0.0235243 + $('#slidermonthlygaming').slider("value") * 0.001513)) / 100;
-                estimatedMonthlyMBS = Math.round(100 * 1024 * (ui.value * 0.0009357 + $('#slidermonthlyemail').slider("value") * 0.000049 + $('#slidermonthlyvideo').slider("value") * 0.0022737 + $('#slidermonthlystreaming').slider("value") * 0.0235243 + $('#slidermonthlygaming').slider("value") * 0.001513)) / 100;
-                estimatedDailyfrommonthly = Math.round(100 * 100024 * (ui.value * 0.0009357 + $('#slidermonthlyemail').slider("value") * 0.000049 + $('#slidermonthlyvideo').slider("value") * 0.0022737 + $('#slidermonthlystreaming').slider("value") * 0.0235243 + $('#slidermonthlygaming').slider("value") * 0.001513) / 3000) / 100;
+                estimatedMonthlyMBS = Math.round(100 * 1024 * (ui.value * 0.0009357 + $('#slidermonthlyemail').slider("value") * 0.000049 + $('#slidermonthlyvideo').slider("value") * 0.0022737 + $('#slidermonthlystreaming').slider("value") * 0.0235243 + $('#slidermonthlygaming').slider("value") * 0.001513)) / 100000;
+                estimatedDailyfrommonthly = Math.round(100 * 100024 * (ui.value * 0.0009357 + $('#slidermonthlyemail').slider("value") * 0.000049 + $('#slidermonthlyvideo').slider("value") * 0.0022737 + $('#slidermonthlystreaming').slider("value") * 0.0235243 + $('#slidermonthlygaming').slider("value") * 0.001513) / 3000) / 100000;
             
             myFunction3(estimatedMonthly);
             monthlyFunction3(estimatedMonthlyMBS);
