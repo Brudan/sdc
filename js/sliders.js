@@ -121,7 +121,7 @@ $( "#sliderdailybrowsing" ).slider({
             monthlyFunction(estimatedMonthlyfromDaily);
             dailyFunction(estimatedDaily);
             $("#browsing-cost").text(estimatedDailyBrowsing);
-            $("#daily-cost").text(estimatedDaily);
+            $("#daily-cost").text(estimatedDaily);     
             $("#dailymonthly-cost").text(estimatedMonthlyfromDaily);
     		//$("#daily-cost2").text(estimatedDailyBrowsing + $("#email-cost").text(estimatedDailyEmail) + $("#browsing-cost").text(estimatedDailyBrowsing) + $("#streaming-cost").text(estimatedDailyStreaming) + $("video-cost").text(estimatedDailyVideo));
     		}        
@@ -491,33 +491,33 @@ function smart_suggestions(estimatedusage, response, start_index_for_search, bun
 
 function monthlyFunction(Monthlyusage)
 {
-    $("#monthlydata").text(estimatedMonthlyfromDaily)
+    $("#monthlydata").text(Math.round((estimatedMonthlyfromDaily/1024)*1000)/1000)
 }
 
 function monthlyFunction2(Monthlyusage)
 {
-    $("#monthlydata").text(estimatedMonthlyfromweekly)
+    $("#monthlydata").text(Math.round((estimatedMonthlyfromweekly/1024)*1000)/1000)
 }
 
 
 function monthlyFunction3(Monthlyusage)
 {
-    $("#monthlydata").text(estimatedMonthlyMBS)
+    $("#monthlydata").text(Math.round((estimatedMonthlyMBS/1024)*1000)/1000)
 }
 
 function dailyFunction(DailyUsage)
 {
-    $("#dailydata").text(estimatedDaily)
+    $("#dailydata").text(Math.round((estimatedDaily/1024)*1000)/1000)
 }
 
 function dailyFunction2(DailyUsage)
 {
-    $("#dailydata").text(estimatedDailyfromweekly)
+    $("#dailydata").text(Math.round((estimatedDailyfromweekly/1024)*1000)/1000)
 }
 
 function dailyFunction3(DailyUsage)
 {
-    $("#dailydata").text(estimatedDailyfrommonthly)
+    $("#dailydata").text(Math.round((estimatedDailyfrommonthly/1024)*1000)/1000)
 }
 
 });
