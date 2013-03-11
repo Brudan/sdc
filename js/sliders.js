@@ -396,85 +396,98 @@ $('div.htmltabs div.tabsContent').hide();//tabsContent class is used to hide all
 
 	//end of tabs
 
-
+//for daily estimates
 function myFunction(estimatedMonthly)
 {
-    var response = 'no bundle';
     var estimatedusage = estimatedMonthly;
-    if (estimatedusage > 0){       
-        response= '25,000 for 500MB Monthly';
-    }
-    if (estimatedusage > 500) {
-        response= '45,000 for 1GB Monthly';
-    }
-    if (estimatedusage > 1024) {
-        response= '85,000 for 3GB Monthly'; 
-    }
-    if (estimatedusage > 3024) {
-        response= '150,000 for 10GB Monthly';
-    }
-    if (estimatedusage > 10024) {
-        response= '250,000 for 20GB Monthly';
-    }
-    if (estimatedusage > 20024) {
-        response= '530,000 for 50GB Monthly';
-    }
+    var response = smart_suggestions(estimatedusage, ' ', 0, 3);
+    if(response.trim() == '') response = 'no bundle';
     $("#yoursolution").text(response);
-//    $("#yoursolution").text("initial");
 }
 
+//for weekly estimates
 function myFunction2(estimatedMonthly)
 {
-    var response = 'no bundle';
     var estimatedusage = estimatedMonthly;
-    if (estimatedusage > 0){       
-        response= '25,000 for 500MB Monthly';
-    }
-    if (estimatedusage > 500) {
-        response= '45,000 for 1GB Monthly';
-    }
-    if (estimatedusage > 1024) {
-        response= '85,000 for 3GB Monthly'; 
-    }
-    if (estimatedusage > 3024) {
-        response= '150,000 for 10GB Monthly';
-    }
-    if (estimatedusage > 10024) {
-        response= '250,000 for 20GB Monthly';
-    }
-    if (estimatedusage > 20024) {
-        response= '530,000 for 50GB Monthly';
-    }
+    var response = smart_suggestions(estimatedusage, ' ', 0, 3);
+    if(response.trim() == '') response = 'no bundle';
     $("#yoursolution").text(response);
-//    $("#yoursolution").text("initial");
 }
 
+//for monthly estimates
 function myFunction3(estimatedMonthly)
 {
-    var response = 'no bundle';
     var estimatedusage = estimatedMonthly;
-    if (estimatedusage > 0){       
-        response= '25,000 for 500MB Monthly';
-    }
-    if (estimatedusage > 0.5) {
-        response= '45,000 for 1GB Monthly';
-    }
-    if (estimatedusage > 1) {
-        response= '85,000 for 3GB Monthly'; 
-    }
-    if (estimatedusage > 3) {
-        response= '150,000 for 10GB Monthly';
-    }
-    if (estimatedusage > 10) {
-        response= '250,000 for 20GB Monthly';
-    }
-    if (estimatedusage > 20) {
-        response= '530,000 for 50GB Monthly';
-    }
+    var response = smart_suggestions(estimatedusage, ' ', 0, 0);
+    if(response.trim() == '') response = 'no bundle';
     $("#yoursolution").text(response);
-    //$("#monthlydata").text(estimatedMonthly)
-//    $("#yoursolution").text("initial");
 }
+
+var bundle_data = {0: [50, 530000, '530,000 for 50GB Monthly\n', 51200],
+                   1: [20, 250000, '250,000 for 20GB Monthly\n', 20480],
+                   2: [10, 150000, '150,000 for 10GB Monthly\n', 10240],
+                   3: [3, 85000, '85,000 for 3GB Monthly\n', 3072],
+                   4: [1, 45000, '45,000 for 1GB Monthly\n', 1024],
+                   5: [0.5, 25000, '25,000 for 500MB Monthly\n', 512]
+                  };
+
+/** 
+* from the list of bundles available, this function sums up the 
+* GBs starting from the index specified as the function parameter
+*/
+function sum_items(start_index, bundle_index){
+    var sum = 0;
+    var index = start_index;
+    for (index; index < 6; index++){
+        sum += bundle_data[index][bundle_index];
+    }
+    return sum;
+}
+
+/** 
+* from the list of bundles available, this function sums up the 
+* prices starting from the index specified as the function parameter.
+*/
+function sum_bundle_prices(start_index){
+    var sum = 0;
+    var index = start_index;
+    for (index; index < 6; index++){
+        sum += bundle_data[index][1];
+    }
+    return sum;
+}
+
+/**
+* recursive function to determine what combination  
+* of bundles suit the user's estimate
+*/
+function smart_suggestions(estimatedusage, response, start_index_for_search, bundle_index){
+    var index = start_index_for_search;
+    //if it's the last item in the list of bundles...
+    if(index == 5){
+        //if it's a valid value, return the response for 500MB
+        if(estimatedusage > 0){
+            response += bundle_data[index][2];            
+        } else {   //otherwise return an empty string
+            response += ' ';
+        } 
+        return response;       
+    } else { //if it's not the last item in the list of bundles...
+        if(estimatedusage > sum_items(index+1, bundle_index)){
+            //if the estimate, is bigger than the bundle we're currently checking, add the response for the current bundle
+            //and recurse down the list to match the remaining estimate
+            response += bundle_data[index][2];
+            return smart_suggestions((estimatedusage - bundle_data[index][bundle_index]), response, index+1, bundle_index);        
+        } else {
+            //if the estimate, is bigger than the bundle we're currently checking, skip this bundle and recurse down the list
+            //to check if any other bundles match
+            return smart_suggestions(estimatedusage, response, index+1, bundle_index);
+        }
+    
+    }
+    
+}
+
 
 function monthlyFunction(Monthlyusage)
 {
